@@ -9,3 +9,10 @@ function playAudio(btn) {
   audio.currentTime = 0;
   audio.play();
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const p = document.querySelector('.letras p');
+  const cursor = document.createElement('span');
+  cursor.classList.add('cursor');
+  p.appendChild(cursor);
+});
