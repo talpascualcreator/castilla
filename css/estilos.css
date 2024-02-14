@@ -27,7 +27,7 @@ body {
 
 .hero {
     height: 100vh;
-    background-image: var(--background), url('../imagenes/hero.jpeg');
+    background-image: var(--background), url('../imagenes/hero.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -462,6 +462,8 @@ ol {
 }
 
 /* responsive design */
+
+
 
 @media screen and (max-width: 800px) {
     :root {
