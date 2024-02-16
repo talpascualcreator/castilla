@@ -673,9 +673,8 @@ ol {
         box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9),
             3px 1px 0px rgba(0, 0, 0, 0.1);
     }
-}
 
-
+    
 
 
 @media screen and (max-width: 800px) {
@@ -867,3 +866,4 @@ ol {
       background-color: #ccc; /* Cambiar el fondo del pie de página en pantallas pequeñas */
     }
   }
+       }
