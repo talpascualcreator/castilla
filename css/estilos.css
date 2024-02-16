@@ -674,6 +674,17 @@ ol {
             3px 1px 0px rgba(0, 0, 0, 0.1);
     }
 
+    .nav {
+        height: auto; /* Cambiar la altura a automática para que los botones puedan ajustarse */
+        flex-wrap: wrap; /* Permitir que los botones se envuelvan en filas */
+        justify-content: space-between; /* Espacio entre los botones */
+    }
+
+    .nav__items {
+        flex-basis: calc(25% - 10px); /* Ajustar el ancho de cada botón para que haya 4 en una fila con espacio entre ellos */
+        margin-bottom: 10px; /* Espacio entre los botones */
+    }
+
     
 
 
