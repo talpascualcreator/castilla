@@ -154,7 +154,7 @@ ol {
 /* about */
 
 .presentation {
-    padding-top: 0;
+    padding-top: 10PX;
     text-align: center;
 }
 
@@ -202,7 +202,7 @@ ol {
 }
 
 .about__img--left {
-    text-align: left;
+    text-align:center;
 }
 
 .about__picture {
@@ -214,7 +214,7 @@ ol {
 
 .about__picture:hover {
     transform: scale(1.05);
-    box-shadow: 40px 30px 20px 20px #000;
+    box-shadow: 25px 30px 20px 20px #000;
 }
 
 .about__paragraph {
