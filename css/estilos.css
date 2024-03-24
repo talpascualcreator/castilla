@@ -195,33 +195,39 @@ ol {
     row-gap: 80px;
     justify-items: center;
     align-items: center;
-}
-
-.about__img {
+    
+  }
+  
+  .about__img {
     text-align: center;
-}
-
-.about__img--left {
+  }
+  
+  .about__img--left {
     text-align:center;
-}
-
-.about__picture {
-    max-width: 80%;
+  }
+  
+  .about__picture {
+    width: 400px;
+    height: 350px;
     box-shadow: 30px 20px 10px 10px #000;
     border-radius: 1em;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.about__picture:hover {
+  }
+  
+  .about__picture:hover {
     transform: scale(1.05);
     box-shadow: 25px 30px 20px 20px #000;
-}
-
-.about__paragraph {
+  }
+  
+  .about__paragraph {
     margin-bottom: 20px;
     line-height: 1.5;
     font-weight: 300;
-}
+  }
+  #equipo p,
+  #equipo b {
+    text-align: justify;
+  }
 
 /* projects */
 
