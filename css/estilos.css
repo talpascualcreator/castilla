@@ -44,6 +44,51 @@ body {
     margin: 0px;
 }
 
+.sidebar {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #ffffff00;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-weight:bold;
+    font-size: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar__button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.sidebar__button:active {
+    transform: translateY(1px);
+}
+
+.sidebar__button:last-child {
+    margin-bottom: 0;
+}
+
+
 #header {
     margin: end;
     width: 500px;
@@ -53,6 +98,13 @@ ul,
 ol {
     list-style: none;
 }
+
+/* Ocultar menú original en pantallas pequeñas */
+.nav {
+    display: none;
+}
+
+
 
 .nav li a {
     background-color: rgb(98, 117, 161);
@@ -186,8 +238,15 @@ ol {
     text-decoration: none;
     padding: var(--boton-padding);
     border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.presentation__cta:hover {
+    background-color: #4a90e2; /* Cambia el color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Hace que el botón se agrande ligeramente al pasar el ratón */
+}
 .about {
     min-height: 400px;
     display: grid;
@@ -365,7 +424,7 @@ ol {
 .testimony__item {
     /* width: 80%; */ /* Puedes eliminar esta propiedad si deseas que los elementos ocupen todo el ancho */
     margin: 0 auto;
-    background: var(--color-secondary);
+    background-color:#4a90e2 ;
     box-shadow: 0 15px 10px rgba(66, 66, 66, .5);
     border-radius: 7px;
     padding: 30px 25px;
@@ -407,12 +466,13 @@ ol {
 }
 
 .testimony__verification {
-    color: #E0AFA0;
+    color: #0c0c0b;
     font-weight: 700;
 }
 
 .testimony__review {
     font-weight: 300;
+    text-align: justify;
 }
 
 /* arreglo letras*/
@@ -543,6 +603,90 @@ ol {
       3px 1px 0px rgba(0, 0, 0, 0.1);
   }
 
+  .form-container {
+    background-image: url('../imagenes/formulario.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.container-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo semi-transparente */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Color de fondo */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Animación de cambio de color */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+
+
 /* footer */
 
 .footer {
@@ -606,6 +750,10 @@ ol {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    } 
+
+    .sidebar__button{
+        font-size: 8px;
     }
     
     xilofono {
@@ -615,7 +763,22 @@ ol {
         align-items: center;
         justify-content:center;
     }
-    
+
+    img{
+        position: relative;
+        left: -20px;
+        max-width: 290px;
+    }
+
+    .hero__container{
+        position: static;
+        top: -100px;
+    }
+    .nav li a{
+        position: static;
+        right: -15px;
+        font-size: 10px;
+    }
     .board {
         display:flex;
         justify-content: flex-end;
@@ -811,6 +974,9 @@ ol {
     .hero__title {
         font-size: 2rem;
     }
+    .hero__subtitle {
+        text-align: justify;
+      }
 
     /* about */
 
@@ -884,3 +1050,15 @@ ol {
     }
   }
        }
+
+       /* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+    }
+  
+    .nav__items {
+      padding: 10px 0; /* Ajusta el espacio entre elementos */
+    }
+  }
+

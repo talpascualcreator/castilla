@@ -26,3 +26,4 @@ function closeVideo() {
   var video = document.getElementById("video-iframe");
   video.src = video.src; // Detener el video al cerrar la caja
 }
+
