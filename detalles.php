@@ -135,7 +135,7 @@ if($id == ""   || $token ==  ""){
 
                 <?php }else { ?>
 
-                <h2><?php echo MONEDA . number_format ($precio, 2, ".",","); ?></h2>
+                <h2><?php echo MONEDA . number_format ($precio); ?></h2>
 
                 <?php } ?>
 
