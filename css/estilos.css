@@ -881,8 +881,10 @@ button[type="submit"]:hover {
     }
 
     .hero__texts {
-        width: 100%;
-        margin: 70px;
+       
+        width: 160%;
+        margin: 30px;
+        margin-bottom: 250px;
     }
 
     .hero__title {
@@ -966,10 +968,6 @@ button[type="submit"]:hover {
         border: 0;
     }
 
-    .hero__texts {
-        text-align: center;
-        margin-bottom: 100px;
-    }
 
     .hero__title {
         font-size: 2rem;
