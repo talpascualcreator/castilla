@@ -574,7 +574,47 @@ ol {
 }
 
 
+/*maracas*/
 
+
+#virtuales .maracas {
+    position: relative;
+    width: 1200px; /* Ajusta el tamaño según sea necesario */
+    height: 700px; /* Ajusta el tamaño según sea necesario */
+   
+   
+}
+
+#virtuales .maracas img {
+    width: 1350px;
+    height: 700px;
+    object-fit: cover;
+}
+
+#virtuales .parte-c, #virtuales .parte-d {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1; /* Colocar las partes encima de la imagen */
+}
+
+#virtuales .parte-c {
+    top:100px; /* Ajusta la posición según sea necesario */
+    left: 820px; /* Ajusta la posición según sea necesario */
+    background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color y la opacidad según sea necesario */
+}
+
+#virtuales .parte-d {
+    bottom: 50px; /* Ajusta la posición según sea necesario */
+    right: 650px; /* Ajusta la posición según sea necesario */
+    background-color: rgba(139, 69, 19, 0.2); /* Ajusta el color y la opacidad según sea necesario */
+    top: 100px;
+}
 
 
   xilofono {
@@ -928,6 +968,39 @@ button[type="submit"]:hover {
         bottom: 20px;
         right: 60%;
         top: 10px;
+        transform: translate(50%, 0);
+    }
+
+    /*maracas*/
+
+    #virtuales .maracas {
+        width: 100%; /* Ancho del 100% para adaptarse al ancho del viewport */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+
+    #virtuales .maracas img {
+        max-width: min-content;
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    #virtuales .parte-c,
+    #virtuales .parte-d {
+        width: 130px; /* Reducimos el tamaño de las partes */
+        height: 120px;
+    }
+
+    #virtuales .parte-c {
+        top: 50%;
+        left: 75%; /* Centramos horizontalmente */
+        transform: translate(-50%, -50%);
+    }
+
+    #virtuales .parte-d {
+        bottom: 20px;
+        right: 75%;
+        top: 50px;
         transform: translate(50%, 0);
     }
 

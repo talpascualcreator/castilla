@@ -10,3 +10,5 @@ document.getElementById('parte-b').addEventListener('click', () => {
     const audio = new Audio('sounds/sonido_clave.mp3'); // Ruta al sonido de la clave
     audio.play();
 });
+
+
