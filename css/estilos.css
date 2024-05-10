@@ -532,7 +532,51 @@ ol {
     padding: 0;
     box-sizing: border-box;
   }
-  
+  /* tambora */
+
+  #virtual .tambora {
+    position: relative;
+    width: 1200px; /* Ajusta el tamaño según sea necesario */
+    height: 700px; /* Ajusta el tamaño según sea necesario */
+   
+   
+}
+
+#virtual .tambora img {
+    width: 1350px;
+    height: 700px;
+    object-fit: cover;
+}
+
+#virtual .parte-a, #virtual .parte-b {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1; /* Colocar las partes encima de la imagen */
+}
+
+#virtual .parte-a {
+    top:230px; /* Ajusta la posición según sea necesario */
+    left: 750px; /* Ajusta la posición según sea necesario */
+    background-color: rgba(255, 255, 255, 0.1); /* Ajusta el color y la opacidad según sea necesario */
+}
+
+#virtual .parte-b {
+    bottom: 50px; /* Ajusta la posición según sea necesario */
+    right: 550px; /* Ajusta la posición según sea necesario */
+    background-color: rgba(139, 69, 19, 0.2); /* Ajusta el color y la opacidad según sea necesario */
+    top: 150px;
+}
+
+
+
+
+
   xilofono {
     
     height: 100vh;
@@ -744,6 +788,7 @@ button[type="submit"]:hover {
 @media screen and (max-width: 414px) and (max-height: 896px),
        (max-width: 390px) and (max-height: 844px),
        (max-width: 430px) and (max-height: 932px),
+       (max-width: 820px) and (max-height: 1180px),
        (max-width: 375px) and (max-height: 667px) {
     /* Estilos para todas las queries */
     * {
@@ -853,8 +898,40 @@ button[type="submit"]:hover {
         flex-basis: calc(25% - 10px); /* Ajustar el ancho de cada botón para que haya 4 en una fila con espacio entre ellos */
         margin-bottom: 10px; /* Espacio entre los botones */
     }
+  
 
-    
+    #virtual .tambora {
+        width: 100%; /* Ancho del 100% para adaptarse al ancho del viewport */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+
+    #virtual .tambora img {
+        max-width: min-content;
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    #virtual .parte-a,
+    #virtual .parte-b {
+        width: 130px; /* Reducimos el tamaño de las partes */
+        height: 120px;
+    }
+
+    #virtual .parte-a {
+        top: 50%;
+        left: 68%; /* Centramos horizontalmente */
+        transform: translate(-50%, -50%);
+    }
+
+    #virtual .parte-b {
+        bottom: 20px;
+        right: 60%;
+        top: 10px;
+        transform: translate(50%, 0);
+    }
+
+}
 
 
 @media screen and (max-width: 800px) {
@@ -1047,7 +1124,7 @@ button[type="submit"]:hover {
       background-color: #ccc; /* Cambiar el fondo del pie de página en pantallas pequeñas */
     }
   }
-       }
+       
 
        /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 768px) {
@@ -1059,4 +1136,37 @@ button[type="submit"]:hover {
       padding: 10px 0; /* Ajusta el espacio entre elementos */
     }
   }
+ 
+  /* Media queries para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    #virtual .tambora {
+        width: 100%; /* Ancho del 100% para adaptarse al ancho del viewport */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
 
+    #virtual .tambora img {
+        max-width: min-content;
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    #virtual .parte-a,
+    #virtual .parte-b {
+        width: 130px; /* Reducimos el tamaño de las partes */
+        height: 120px;
+    }
+
+    #virtual .parte-a {
+        top: 50%;
+        left: 68%; /* Centramos horizontalmente */
+        transform: translate(-50%, -50%);
+    }
+
+    #virtual .parte-b {
+        bottom: 20px;
+        right: 60%;
+        top: 10px;
+        transform: translate(50%, 0);
+    }
+}

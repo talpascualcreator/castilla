@@ -95,3 +95,6 @@ function closeVideo() {
             column.addEventListener("click", ordenar);
         });
 
+  
+      
+      
