@@ -686,80 +686,78 @@ ol {
     box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9),
       3px 1px 0px rgba(0, 0, 0, 0.1);
   }
-
-  .form-container {
+/* formularios*/
+/* Contenedor del formulario */
+.container-form {
     background-image: url('../imagenes/formulario.jpeg');
     background-size: cover;
     background-position: center;
-}
-.container-form {
     max-width: 600px;
     margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo semi-transparente */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo semi-transparente */
     border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
 }
+
+/* Contenedor para la parte izquierda del formulario */
+.container-left {
+    width: 50%;
+    float: left;
+}
+
+/* Contenedor para la parte derecha del formulario */
+.container-right {
+    width: 50%;
+    float: right;
+}
+
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-   
+    margin-bottom: 30px;
 }
 
 form {
-    display: grid;
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:normal;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
     font-weight: bold;
+    width: 100%; /* Ancho de las etiquetas */
 }
 
 input[type="text"],
-input[type="number"],
-select,
-input[type="password"],
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
+input[type="email"],
+textarea {
+    width: 50%;
+    padding: 12px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #272de5;
     transition: border-color 0.3s ease;
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+   
 }
 
 input[type="text"]:focus,
-input[type="number"]:focus,
-select:focus,
-input[type="password"]:focus {
+input[type="email"]:focus,
+textarea:focus {
     outline: none;
-    border-color: #007bff;
-}
-
-.botones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+   
+    
 }
 
 button[type="submit"] {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     background-color: #007bff; /* Color de fondo */
-    color: #fff;
+    color: #ffffff; /* Color de texto */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s; /* Animación de cambio de color */
@@ -768,6 +766,21 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3; /* Cambio de color al pasar el ratón */
 }
+
+input[type="submit"] {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+
 
 
 
@@ -833,7 +846,7 @@ button[type="submit"]:hover {
     /* Estilos para todas las queries */
     * {
         margin: 0;
-        padding: 0;
+        padding: 5px;
         box-sizing: border-box;
     } 
 
