@@ -780,8 +780,10 @@ input[type="submit"]:hover {
     background-color: #0056b3; /* Cambio de color al pasar el ratón */
 }
 
-
-
+/* esta oculto el boton de restablecer contraseña */
+.sidebar__button.hidden {
+    display: none;
+}
 
 
 /* footer */
